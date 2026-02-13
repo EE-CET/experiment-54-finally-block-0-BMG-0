@@ -1,18 +1,21 @@
-
+import java.util.Scanner;
 
 public class FinallyDemo {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
 
-        int numerator = sc.nextInt();
-        int denominator = sc.nextInt();
+        int a = sc.nextInt();
+        int b = sc.nextInt();
 
         try {
-            int result = numerator/denominator;
-            System.out.println("result = "+result);
-        } catch (Exception e) {
-            System.out.println("error :"+e.getMessage());
-        } finally{
-            System.out.println("finally block executed");
+            int result = a / b;
+            System.out.println("Result: " + result);
+        } catch (ArithmeticException e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            System.out.println("Finally block executed");
         }
+
+        sc.close();
     }
 }
