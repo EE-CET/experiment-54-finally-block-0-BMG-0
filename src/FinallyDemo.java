@@ -1,9 +1,8 @@
-import java.util.Scanner;
+
 
 public class FinallyDemo {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("enter numerator and denominator :");
+
         int numerator = sc.nextInt();
         int denominator = sc.nextInt();
 
